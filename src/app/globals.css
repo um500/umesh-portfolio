@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-manrope: "Manrope Variable", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Sections are jumped to via the sticky navbar — offset the landing point
+   so headings never end up hidden underneath it. */
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html,
+body {
+  background-color: #061426;
+  color: #f5f7fa;
+}
+
+body {
+  font-family: var(--font-manrope);
+}
+
+::selection {
+  background: rgba(25, 230, 208, 0.25);
+  color: #f5f7fa;
+}
+
+/* Focus states: visible everywhere, never suppressed */
+:focus-visible {
+  outline: 2px solid #19e6d0;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  color: #19e6d0;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.eyebrow-line {
+  width: 28px;
+  height: 1px;
+  background: rgba(25, 230, 208, 0.6);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #19e6d0 0%, #20d9ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glass-card {
+  background: rgba(11, 32, 54, 0.6);
+  border: 1px solid rgba(120, 190, 220, 0.16);
+  backdrop-filter: blur(12px);
+}
+
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: #19e6d0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.link-underline:hover::after {
+  transform: scaleX(1);
+}
+
+.field-input {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(120, 190, 220, 0.16);
+  background: #081a2d;
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+  color: #f5f7fa;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.field-input::placeholder {
+  color: #71839a;
+}
+
+.field-input:focus {
+  border-color: rgba(25, 230, 208, 0.55);
+  box-shadow: 0 0 0 3px rgba(25, 230, 208, 0.12);
+  outline: none;
+}
+
+/* Custom scrollbar, kept subtle */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #061426;
+}
+::-webkit-scrollbar-thumb {
+  background: #0b2036;
+  border-radius: 8px;
+  border: 2px solid #061426;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #102a43;
+}
+/* Infinite marquee rows for the Skills teaser — two tracks scrolling in
+   opposite directions. Each track's content is duplicated in JSX so the
+   -50% translate loops seamlessly. */
+@keyframes marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 32s linear infinite;
+}
+.marquee-track-reverse {
+  animation-name: marquee-right;
+}
+.marquee-row:hover .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+/* Skills hub — slow rotating conic-gradient ring used as an animated border,
+   plus a small dot that travels down the connector line beneath it. */
+@keyframes hub-ring-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hub-ring {
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: conic-gradient(from 0deg, transparent 0%, #19e6d0 15%, transparent 35%);
+  animation: hub-ring-spin 7s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hub-ring {
+    animation: none;
+  }
+}
+
+@keyframes flow-dot {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+.connector-dot {
+  animation: flow-dot 2.2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .connector-dot {
+    animation: none;
+    opacity: 0.6;
+    top: 50% !important;
+  }
+}
