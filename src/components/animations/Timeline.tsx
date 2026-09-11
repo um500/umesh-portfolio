@@ -16,7 +16,9 @@ export function Timeline({
     <div className="space-y-14">
       {experience.length > 0 ? (
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted">Experience</h3>
+          {certifications.length > 0 ? (
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted">Experience</h3>
+          ) : null}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -33,7 +35,24 @@ export function Timeline({
         </div>
       ) : null}
 
-     
+      {certifications.length > 0 ? (
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-text-muted">Certifications</h3>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+            variants={staggerContainer}
+            className="mt-5 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {certifications.map((item) => (
+              <motion.div key={item._id} variants={staggerItem}>
+                <CertificationItem certification={item} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      ) : null}
     </div>
   );
 }
