@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Button, NudgeIcon } from "@/components/ui";
-import { ServiceCard } from "@/components/cards";
+import { ServiceCard } from "@/components/cards/ServiceCard";
 import { Reveal } from "@/components/animations/Reveal";
 import { fadeIn, fadeUp } from "@/lib/motion";
 import { getServices } from "@/sanity/fetch";

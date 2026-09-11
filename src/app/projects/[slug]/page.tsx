@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, Github } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Button } from "@/components/ui";
-import { ProjectCard } from "@/components/cards";
+import { ProjectCard } from "@/components/cards/ProjectCard";
 import { Reveal } from "@/components/animations/Reveal";
 import { fadeIn, fadeLeft, fadeUp, scaleFadeItem } from "@/lib/motion";
 import { getProjectBySlug, getRelatedProjects } from "@/sanity/fetch";

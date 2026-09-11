@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { SectionHeading } from "@/components/ui";
-import { TestimonialCard } from "@/components/cards";
+import { TestimonialCard } from "@/components/cards/TestimonialCard";
 import { fadeUp } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 import type { Testimonial } from "@/types/portfolio";

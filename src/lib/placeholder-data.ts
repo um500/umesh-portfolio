@@ -19,9 +19,9 @@ import type {
 } from "@/types/portfolio";
 
 export const placeholderSiteSettings: SiteSettings = {
-  siteTitle: "Umesh — Web Developer / Designer",
+  siteTitle: "Umesh — MERN Stack Developer",
   description:
-    "Umesh is a Web Developer and Designer creating modern, responsive and user-focused digital experiences.",
+    "Umesh is a MERN Stack Developer building modern, responsive, full-stack web experiences.",
   email: "umesh@example.com",
   phone: "+91 00000 00000",
   location: "India",
@@ -29,6 +29,7 @@ export const placeholderSiteSettings: SiteSettings = {
     { platform: "github", url: "https://github.com/umesh" },
     { platform: "linkedin", url: "https://linkedin.com/in/umesh" },
     { platform: "instagram", url: "https://instagram.com/umesh" },
+    { platform: "twitter", url: "https://twitter.com/umesh" },
     { platform: "email", url: "mailto:umesh@example.com" },
   ],
 };
@@ -36,10 +37,9 @@ export const placeholderSiteSettings: SiteSettings = {
 export const placeholderHero: Hero = {
   greeting: "Hi, I'm",
   name: "Umesh.",
-  role: "Web Developer / Designer",
-  tagline: "I build modern, responsive digital experiences.",
-  description:
-    "I create clean, high-performance websites and digital experiences that combine thoughtful design, usability, and modern technology.",
+  role: "MERN Stack Developer",
+  tagline: "I build modern, full-stack web experiences using the MERN stack",
+  description: "that help businesses grow and stand out on the web.",
   primaryButtonLabel: "Let's Connect",
   primaryButtonHref: "#contact",
   secondaryButtonLabel: "Download Resume",
@@ -55,14 +55,14 @@ export const placeholderHero: Hero = {
 export const placeholderAbout: About = {
   heading: "Turning Ideas Into Real Digital Solutions.",
   description:
-    "I'm Umesh, a Web Developer and Designer who enjoys turning ideas into clean, functional products focused on real usability.",
+    "I'm Umesh, a passionate MERN Stack Developer who loves creating clean, modern, and user-friendly websites. I enjoy turning ideas into real digital products that are not only beautiful but also functional and focused on user experience.",
   longDescription:
-    "I'm always eager to learn new technologies and take on new challenges — the goal is always software that actually helps the people using it.",
+    "I'm always eager to learn new technologies and take on exciting challenges. My goal is to build solutions that make a real impact and help businesses grow.",
   highlights: [
-    { title: "Creative Thinker", description: "I love exploring new ideas before settling on the simplest one.", icon: "lightbulb" },
-    { title: "Problem Solver", description: "I enjoy breaking down complex problems into simple solutions.", icon: "circle-dot" },
-    { title: "Detail Oriented", description: "I care about the small things that make an interface feel right.", icon: "eye" },
-    { title: "Team Player", description: "The best work happens through honest collaboration.", icon: "users" },
+    { title: "Creative Thinker", description: "I love brainstorming new ideas.", icon: "lightbulb" },
+    { title: "Problem Solver", description: "I enjoy finding simple solutions to complex problems.", icon: "circle-dot" },
+    { title: "Detail Oriented", description: "I focus on quality and clean design.", icon: "eye" },
+    { title: "Team Player", description: "I believe great things happen through collaboration.", icon: "users" },
   ],
 };
 
@@ -92,44 +92,44 @@ export const placeholderEducation: Education[] = [
 
 export const placeholderSkills: Skill[] = [
   // Frontend
-  { _id: "sk-1", name: "React.js", category: "Frontend", icon: "react", order: 1, featured: true },
-  { _id: "sk-2", name: "Next.js", category: "Frontend", icon: "nextjs", order: 2, featured: true },
-  { _id: "sk-3", name: "JavaScript (ES6+)", category: "Frontend", icon: "javascript", order: 3, featured: true },
-  { _id: "sk-4", name: "HTML5 & CSS3", category: "Frontend", icon: "html5", order: 4, featured: true },
-  { _id: "sk-5", name: "Tailwind CSS", category: "Frontend", icon: "tailwind", order: 5, featured: true },
-  { _id: "sk-6", name: "Bootstrap", category: "Frontend", icon: "bootstrap", order: 6, featured: true },
-  { _id: "sk-7", name: "REST API Integration", category: "Frontend", icon: "rest-api", order: 7, featured: true },
-  { _id: "sk-8", name: "Framer Motion", category: "Frontend", icon: "framer-motion", order: 8, featured: true },
+  { _id: "sk-1", name: "React.js", category: "Frontend", icon: "react", description: "Component-based frontend framework", order: 1, featured: true },
+  { _id: "sk-2", name: "Next.js", category: "Frontend", icon: "nextjs", description: "Full-stack React framework", order: 2, featured: true },
+  { _id: "sk-3", name: "JavaScript (ES6+)", category: "Frontend", icon: "javascript", description: "Core scripting language", order: 3, featured: true },
+  { _id: "sk-4", name: "HTML5 & CSS3", category: "Frontend", icon: "html5", description: "Markup and styling foundation", order: 4, featured: true },
+  { _id: "sk-5", name: "Tailwind CSS", category: "Frontend", icon: "tailwind", description: "Utility-first CSS framework", order: 5, featured: true },
+  { _id: "sk-6", name: "Bootstrap", category: "Frontend", icon: "bootstrap", description: "Responsive UI component library", order: 6, featured: true },
+  { _id: "sk-7", name: "REST API Integration", category: "Frontend", icon: "rest-api", description: "Connecting frontend to backend services", order: 7, featured: true },
+  { _id: "sk-8", name: "Framer Motion", category: "Frontend", icon: "framer-motion", description: "Smooth animations for React", order: 8, featured: true },
 
   // Backend
-  { _id: "sk-9", name: "Node.js", category: "Backend", icon: "nodejs", order: 9, featured: true },
-  { _id: "sk-10", name: "MongoDB", category: "Backend", icon: "mongodb", order: 10, featured: true },
-  { _id: "sk-11", name: "MongoDB Atlas", category: "Backend", icon: "mongodb", order: 11, featured: true },
-  { _id: "sk-12", name: "Mongoose", category: "Backend", icon: "mongoose", order: 12, featured: true },
-  { _id: "sk-13", name: "SQL", category: "Backend", icon: "sql", order: 13, featured: true },
+  { _id: "sk-9", name: "Node.js", category: "Backend", icon: "nodejs", description: "JavaScript runtime environment", order: 9, featured: true },
+  { _id: "sk-10", name: "MongoDB", category: "Backend", icon: "mongodb", description: "NoSQL document database", order: 10, featured: true },
+  { _id: "sk-11", name: "MongoDB Atlas", category: "Backend", icon: "mongodb", description: "Cloud-hosted MongoDB service", order: 11, featured: true },
+  { _id: "sk-12", name: "Mongoose", category: "Backend", icon: "mongoose", description: "MongoDB object modeling", order: 12, featured: true },
+  { _id: "sk-13", name: "SQL", category: "Backend", icon: "sql", description: "Relational database querying", order: 13, featured: true },
 
   // Languages
-  { _id: "sk-14", name: "JavaScript", category: "Languages", icon: "javascript", order: 14, featured: true },
-  { _id: "sk-15", name: "Core Java", category: "Languages", icon: "java", order: 15, featured: true },
+  { _id: "sk-14", name: "JavaScript", category: "Languages", icon: "javascript", description: "General-purpose programming language", order: 14, featured: true },
+  { _id: "sk-15", name: "Core Java", category: "Languages", icon: "java", description: "Object-oriented programming language", order: 15, featured: true },
 
   // Tools & Platforms
-  { _id: "sk-16", name: "Git", category: "Tools & Platforms", icon: "git", order: 16, featured: true },
-  { _id: "sk-17", name: "GitHub", category: "Tools & Platforms", icon: "github", order: 17, featured: true },
-  { _id: "sk-18", name: "VS Code", category: "Tools & Platforms", icon: "vscode", order: 18, featured: true },
-  { _id: "sk-19", name: "Postman", category: "Tools & Platforms", icon: "postman", order: 19, featured: true },
-  { _id: "sk-20", name: "Vercel", category: "Tools & Platforms", icon: "vercel", order: 20, featured: true },
-  { _id: "sk-21", name: "Netlify", category: "Tools & Platforms", icon: "netlify", order: 21, featured: true },
-  { _id: "sk-22", name: "Render", category: "Tools & Platforms", icon: "render", order: 22, featured: true },
+  { _id: "sk-16", name: "Git", category: "Tools & Platforms", icon: "git", description: "Version control system", order: 16, featured: true },
+  { _id: "sk-17", name: "GitHub", category: "Tools & Platforms", icon: "github", description: "Code hosting and collaboration", order: 17, featured: true },
+  { _id: "sk-18", name: "VS Code", category: "Tools & Platforms", icon: "vscode", description: "Primary code editor", order: 18, featured: true },
+  { _id: "sk-19", name: "Postman", category: "Tools & Platforms", icon: "postman", description: "API testing and debugging", order: 19, featured: true },
+  { _id: "sk-20", name: "Vercel", category: "Tools & Platforms", icon: "vercel", description: "Frontend deployment platform", order: 20, featured: true },
+  { _id: "sk-21", name: "Netlify", category: "Tools & Platforms", icon: "netlify", description: "Static site hosting & deployment", order: 21, featured: true },
+  { _id: "sk-22", name: "Render", category: "Tools & Platforms", icon: "render", description: "Cloud app hosting", order: 22, featured: true },
 
   // AI Developer Tools
-  { _id: "sk-23", name: "ChatGPT", category: "AI Tools", icon: "chatgpt", order: 23, featured: true },
-  { _id: "sk-24", name: "Claude", category: "AI Tools", icon: "claude", order: 24, featured: true },
-  { _id: "sk-25", name: "Cursor", category: "AI Tools", icon: "cursor", order: 25, featured: true },
-  { _id: "sk-26", name: "Replit", category: "AI Tools", icon: "replit", order: 26, featured: true },
-  { _id: "sk-27", name: "Lovable", category: "AI Tools", icon: "lovable", order: 27, featured: true },
-  { _id: "sk-28", name: "v0", category: "AI Tools", icon: "v0", order: 28, featured: true },
+  { _id: "sk-23", name: "ChatGPT", category: "AI Tools", icon: "chatgpt", description: "AI pair-programming assistant", order: 23, featured: true },
+  { _id: "sk-24", name: "Claude", category: "AI Tools", icon: "claude", description: "AI coding and reasoning assistant", order: 24, featured: true },
+  { _id: "sk-25", name: "Cursor", category: "AI Tools", icon: "cursor", description: "AI-powered code editor", order: 25, featured: true },
+  { _id: "sk-26", name: "Replit", category: "AI Tools", icon: "replit", description: "Cloud-based coding environment", order: 26, featured: true },
+  { _id: "sk-27", name: "Lovable", category: "AI Tools", icon: "lovable", description: "AI app builder", order: 27, featured: true },
+  { _id: "sk-28", name: "v0", category: "AI Tools", icon: "v0", description: "AI UI generation tool", order: 28, featured: true },
 
-     // Marketing & Ads
+  // Marketing & Ads
   { _id: "sk-29", name: "Meta Ads", category: "Marketing & Ads", icon: "meta-ads", description: "Facebook & Instagram ad campaigns", order: 29, featured: true },
   { _id: "sk-30", name: "Google Ads", category: "Marketing & Ads", icon: "google-ads", description: "Search & display ad campaigns", order: 30, featured: true },
 ];
@@ -144,6 +144,8 @@ export const placeholderProjects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     category: "Web App",
     year: "2026",
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/example/sample-project-one",
     featured: true,
     order: 1,
   },
@@ -155,6 +157,8 @@ export const placeholderProjects: Project[] = [
     technologies: ["React", "Sanity", "Framer Motion"],
     category: "Business Website",
     year: "2026",
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/example/sample-project-two",
     featured: true,
     order: 2,
   },
@@ -166,6 +170,8 @@ export const placeholderProjects: Project[] = [
     technologies: ["React", "Node.js", "MongoDB"],
     category: "Product",
     year: "2025",
+    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/example/sample-project-three",
     featured: true,
     order: 3,
   },
@@ -174,15 +180,34 @@ export const placeholderProjects: Project[] = [
 export const placeholderExperience: Experience[] = [
   {
     _id: "exp-1",
-    role: "Web Developer",
+    role: "MERN Stack Developer",
     company: "Your Company / Freelance",
     employmentType: "Full-time",
     location: "Remote",
     startDate: "2023",
     current: true,
     description: "Placeholder entry — describe your real role in Sanity Studio.",
-    responsibilities: [],
-    technologies: [],
+    responsibilities: [
+      "Placeholder responsibility — add real bullet points in Sanity Studio.",
+      "Placeholder responsibility — add real bullet points in Sanity Studio.",
+    ],
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
+    order: 1,
+  },
+  {
+    _id: "exp-2",
+    role: "MERN Stack Developer",
+    company: "Your Company / Freelance",
+    employmentType: "Full-time",
+    location: "Remote",
+    startDate: "2023",
+    current: true,
+    description: "Placeholder entry — describe your real role in Sanity Studio.",
+    responsibilities: [
+      "Placeholder responsibility — add real bullet points in Sanity Studio.",
+      "Placeholder responsibility — add real bullet points in Sanity Studio.",
+    ],
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
     order: 1,
   },
 ];

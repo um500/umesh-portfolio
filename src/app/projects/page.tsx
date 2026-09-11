@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/Container";
-import { ProjectCard } from "@/components/cards";
+import { ProjectCard } from "@/components/cards/ProjectCard";
 import { Reveal } from "@/components/animations/Reveal";
 import { fadeIn, fadeUp } from "@/lib/motion";
 import { getProjects } from "@/sanity/fetch";

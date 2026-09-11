@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Eye, Github } from "lucide-react";
+import { ArrowUpRight, Eye, Github, ImageIcon } from "lucide-react";
 import { urlForImage } from "@/sanity/image";
 import type { Project } from "@/types/portfolio";
 
@@ -34,15 +34,18 @@ export function ProjectCard({ project }: { project: Project }) {
             sizes="(min-width: 1024px) 33vw, 100vw"
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-card to-bg-secondary text-text-muted">
-            {project.title}
+          <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-card via-bg-secondary to-card">
+            <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-bg-secondary text-accent">
+              <ImageIcon className="h-6 w-6" />
+            </span>
+            <span className="px-4 text-center text-sm font-medium text-text-muted">{project.title}</span>
           </div>
         )}
 
         <div className="absolute inset-0 flex flex-wrap items-end justify-center gap-3 bg-gradient-to-t from-bg via-bg/50 to-transparent px-4 pb-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           {primaryAction ? (
             
-            <a  href={primaryAction.href}
+            <a   href={primaryAction.href}
               target="_blank"
               rel="noopener noreferrer"
               className="relative z-20 inline-flex translate-y-3 items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-bg shadow-glow transition-all duration-300 hover:bg-accent-bright group-hover:translate-y-0"
@@ -75,7 +78,7 @@ export function ProjectCard({ project }: { project: Project }) {
         {project.liveUrl && project.githubUrl ? (
           <div className="relative z-20 mt-5 flex items-center text-sm">
             
-             <a  href={project.githubUrl}
+            <a  href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="group/link inline-flex items-center gap-1 text-text-secondary transition-colors duration-200 hover:text-text-primary"
