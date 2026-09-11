@@ -11,24 +11,33 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://umesh.dev";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Umesh — Web Developer / Designer",
-    template: "%s | Umesh",
+    default: "Umesh — Portfolio",
+    template: "%s | Umesh — Portfolio",
   },
   description:
     "Umesh is a Web Developer and Designer creating modern, responsive and user-focused digital experiences.",
   openGraph: {
-    title: "Umesh — Web Developer / Designer",
+    title: "Umesh — Portfolio",
     description:
       "Umesh is a Web Developer and Designer creating modern, responsive and user-focused digital experiences.",
     url: siteUrl,
-    siteName: "Umesh",
+    siteName: "Umesh — Portfolio",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Umesh — Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Umesh — Web Developer / Designer",
+    title: "Umesh — Portfolio",
     description:
       "Umesh is a Web Developer and Designer creating modern, responsive and user-focused digital experiences.",
+    images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
 };
@@ -49,7 +58,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       },
       {
         "@type": "WebSite",
-        name: "Umesh — Web Developer / Designer",
+        name: "Umesh — Portfolio",
         url: siteUrl,
       },
     ],
@@ -63,8 +72,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <a
-          href="#main-content"
+        
+         <a href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-bg"
         >
           Skip to content
