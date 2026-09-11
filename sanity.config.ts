@@ -4,7 +4,7 @@ import { visionTool } from "@sanity/vision";
 import { schemaTypes } from "./src/studio/schemaTypes";
 import { structure } from "./src/studio/structure";
 
-const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "pjggg4py";
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "pjjgg4py";
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
 
 export default defineConfig({
